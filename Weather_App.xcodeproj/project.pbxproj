@@ -13,6 +13,9 @@
 		655A4A982660DE2700D74B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655A4A972660DE2700D74B1C /* Assets.xcassets */; };
 		655A4A9B2660DE2700D74B1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655A4A9A2660DE2700D74B1C /* Preview Assets.xcassets */; };
 		655A4A9E2660DE2700D74B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655A4A9C2660DE2700D74B1C /* LaunchScreen.storyboard */; };
+		655A4AAB2660EAC000D74B1C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4AAA2660EAC000D74B1C /* API.swift */; };
+		655A4AAD2660EAE700D74B1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4AAC2660EAE700D74B1C /* Extensions.swift */; };
+		655A4AB02660EBED00D74B1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4AAF2660EBED00D74B1C /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		655A4A9A2660DE2700D74B1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		655A4A9D2660DE2700D74B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		655A4A9F2660DE2700D74B1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655A4AAA2660EAC000D74B1C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		655A4AAC2660EAE700D74B1C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		655A4AAF2660EBED00D74B1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,11 @@
 		655A4A902660DE2500D74B1C /* Weather_App */ = {
 			isa = PBXGroup;
 			children = (
+				655A4AA92660EAB000D74B1C /* Networking */,
+				655A4AA82660E97800D74B1C /* LottieAnimations */,
+				655A4AA72660E97000D74B1C /* Controllers */,
+				655A4AA62660E96900D74B1C /* Views */,
+				655A4AA52660E95600D74B1C /* Models */,
 				655A4A912660DE2500D74B1C /* AppDelegate.swift */,
 				655A4A932660DE2500D74B1C /* SceneDelegate.swift */,
 				655A4A952660DE2500D74B1C /* ContentView.swift */,
@@ -73,6 +84,44 @@
 				655A4A9A2660DE2700D74B1C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		655A4AA52660E95600D74B1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		655A4AA62660E96900D74B1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		655A4AA72660E97000D74B1C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		655A4AA82660E97800D74B1C /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LottieAnimations;
+			sourceTree = "<group>";
+		};
+		655A4AA92660EAB000D74B1C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				655A4AAA2660EAC000D74B1C /* API.swift */,
+				655A4AAC2660EAE700D74B1C /* Extensions.swift */,
+				655A4AAF2660EBED00D74B1C /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655A4AB02660EBED00D74B1C /* NetworkManager.swift in Sources */,
+				655A4AAD2660EAE700D74B1C /* Extensions.swift in Sources */,
 				655A4A922660DE2500D74B1C /* AppDelegate.swift in Sources */,
 				655A4A942660DE2500D74B1C /* SceneDelegate.swift in Sources */,
+				655A4AAB2660EAC000D74B1C /* API.swift in Sources */,
 				655A4A962660DE2500D74B1C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
