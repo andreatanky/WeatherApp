@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuHeader: View {
+struct MenuHeaderView: View {
     
     @ObservedObject var cityVM: CityViewViewModel
     
@@ -43,8 +43,8 @@ struct MenuHeader: View {
     }
 }
 
-//struct MenuHeader_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MenuHeader(cityVM: nil)
-//    }
-//}
+struct MenuHeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+       ContentView()
+    }
+}
