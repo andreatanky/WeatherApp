@@ -13,11 +13,12 @@ struct ContentView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
-                MenuHeaderView(cityVM: cityVM).padding(.top, 40)
+                MenuHeaderView(cityVM: cityVM).padding(.top, 50)
                 ScrollView(showsIndicators: false) {
                     CityView(cityVM: cityVM)
-                }.padding(.top, 60)
-            }.background(LinearGradient(gradient: Gradient(colors: [Color.white, Color.pink]), startPoint: .topLeading, endPoint: .bottomTrailing)).edgesIgnoringSafeArea(.all)
+                }.padding(.top, 40)
+            }.background(Rectangle().foregroundColor(Color(#colorLiteral(red: 0.7718173862, green: 0.9342723489, blue: 0.9700935483, alpha: 1))))
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }

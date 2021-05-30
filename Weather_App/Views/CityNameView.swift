@@ -18,7 +18,7 @@ struct CityNameView: View {
                     .font(.title)
                     .bold()
                 Text(dt)
-            }.foregroundColor(.white)
+            }.foregroundColor(.black)
         }
     }
 }

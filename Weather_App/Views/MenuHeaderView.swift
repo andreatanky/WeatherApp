@@ -17,13 +17,14 @@ struct MenuHeaderView: View {
         HStack {
             TextField("", text: $searchTerm)
                 .padding(.leading, 20)
+                .foregroundColor(.black)
             
             Button {
                 cityVM.city = searchTerm
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.pink)
+                        .fill(Color(#colorLiteral(red: 0.9196747541, green: 0.2115088999, blue: 0.04895227402, alpha: 1)))
                         .frame(width: 40, height: 40)
                     
                     Image(systemName: "magnifyingglass")
@@ -39,7 +40,7 @@ struct MenuHeaderView: View {
                 .padding(.leading, 0)
             
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.blue.opacity(0.5))
+                .fill(Color.white.opacity(0.3))
         })
     }
 }
