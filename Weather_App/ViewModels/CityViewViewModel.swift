@@ -40,7 +40,7 @@ final class CityViewViewModel: ObservableObject {
     }
     
     var date: String {
-        return dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(weather.current.date)))
+        return dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(weather.current.dt)))
     }
     
     var weatherIcon: String {

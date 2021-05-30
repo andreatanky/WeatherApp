@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CityNameView: View {
     var city: String
-    var date: String
+    var dt: String
     
     var body: some View {
         HStack {
@@ -17,7 +17,7 @@ struct CityNameView: View {
                 Text(city)
                     .font(.title)
                     .bold()
-                Text(date)
+                Text(dt)
             }.foregroundColor(.white)
         }
     }

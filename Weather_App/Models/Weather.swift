@@ -8,7 +8,7 @@
 import Foundation
 
 class Weather: Codable, Identifiable {
-    var date: Int
+    var dt: Int
     var temp: Double
     var feels_like: Double
     var pressure: Int
@@ -20,7 +20,7 @@ class Weather: Codable, Identifiable {
     var weather: [WeatherDetail]
     
     enum CodingKey: String {
-        case date
+        case dt
         case temp
         case feels_like
         case pressure
@@ -33,7 +33,7 @@ class Weather: Codable, Identifiable {
     }
     
     init() {
-        date = 0
+        dt = 0
         temp = 0.0
         feels_like = 0.0
         pressure = 0

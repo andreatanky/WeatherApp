@@ -14,14 +14,14 @@ struct DailyWeatherView: View {
     var body: some View {
         ForEach(cityVM.weather.daily) { weather in
             LazyVStack {
-                
+                dailyCell(weather: weather)
             }
         }
     }
     
     private func dailyCell(weather: DailyWeather) -> some View {
         HStack {
-            Text(cityVM.getDayFor(timestamp: weather.date).uppercased()).frame(width: 50)
+            Text(cityVM.getDayFor(timestamp: weather.dt).uppercased()).frame(width: 50)
             
             Spacer()
             
