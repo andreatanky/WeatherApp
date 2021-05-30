@@ -11,7 +11,7 @@ import CoreLocation
 final class CityViewViewModel: ObservableObject {
     @Published var weather = WeatherResponse.empty()
     
-    @Published var city: String = "San Francisco" {
+    @Published var city: String = "Singapore" {
         didSet {
             getLocation()
         }
@@ -99,7 +99,7 @@ final class CityViewViewModel: ObservableObject {
             getWeatherInternalCity(city: city, for: urlString)
         } else {
             // Default
-            let urlString = API.getURLFor(lat: 37.5485, lon: -121.9886)
+            let urlString = API.getURLFor(lat: 1.3521, lon: 103.8198)
             getWeatherInternalCity(city: city, for: urlString)
         }
     }
