@@ -31,6 +31,7 @@
 		651768C22663653E00CB5912 /* CityNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651768C12663653E00CB5912 /* CityNameView.swift */; };
 		651768C42663694200CB5912 /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651768C32663694200CB5912 /* TodayWeatherView.swift */; };
 		651768C62663910F00CB5912 /* HourlyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651768C52663910F00CB5912 /* HourlyWeatherView.swift */; };
+		651768C82663BF9600CB5912 /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651768C72663BF9600CB5912 /* DailyWeatherView.swift */; };
 		655A4A922660DE2500D74B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4A912660DE2500D74B1C /* AppDelegate.swift */; };
 		655A4A942660DE2500D74B1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4A932660DE2500D74B1C /* SceneDelegate.swift */; };
 		655A4A962660DE2500D74B1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4A952660DE2500D74B1C /* ContentView.swift */; };
@@ -72,6 +73,7 @@
 		651768C12663653E00CB5912 /* CityNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameView.swift; sourceTree = "<group>"; };
 		651768C32663694200CB5912 /* TodayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
 		651768C52663910F00CB5912 /* HourlyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherView.swift; sourceTree = "<group>"; };
+		651768C72663BF9600CB5912 /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
 		655A4A8E2660DE2500D74B1C /* Weather_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		655A4A912660DE2500D74B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		655A4A932660DE2500D74B1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				651768BF266359A700CB5912 /* MenuHeaderView.swift */,
 				651768C32663694200CB5912 /* TodayWeatherView.swift */,
 				651768C52663910F00CB5912 /* HourlyWeatherView.swift */,
+				651768C72663BF9600CB5912 /* DailyWeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				651768C62663910F00CB5912 /* HourlyWeatherView.swift in Sources */,
+				651768C82663BF9600CB5912 /* DailyWeatherView.swift in Sources */,
 				655A4AB82661395400D74B1C /* DailyWeather.swift in Sources */,
 				655A4AB42661393700D74B1C /* Weather.swift in Sources */,
 				651768C22663653E00CB5912 /* CityNameView.swift in Sources */,
