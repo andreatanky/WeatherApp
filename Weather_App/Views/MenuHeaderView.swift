@@ -11,7 +11,7 @@ struct MenuHeaderView: View {
     
     @ObservedObject var cityVM: CityViewViewModel
     
-    @State private var searchTerm = "San Francisco"
+    @State private var searchTerm = "Singapore"
     
     var body: some View {
         HStack {
@@ -23,12 +23,13 @@ struct MenuHeaderView: View {
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.blue)
+                        .fill(Color.pink)
+                        .frame(width: 40, height: 40)
                     
-                    Image(systemName: "location.fill")
+                    Image(systemName: "magnifyingglass")
                 }
             }
-            .frame(width: 50, height: 50)
+            .frame(width: 40, height: 30)
         }
         .foregroundColor(.white)
         .padding()
