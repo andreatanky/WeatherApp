@@ -21,6 +21,7 @@
 		655A4AB62661394500D74B1C /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4AB52661394500D74B1C /* WeatherDetail.swift */; };
 		655A4AB82661395400D74B1C /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4AB72661395400D74B1C /* DailyWeather.swift */; };
 		655A4ABA2661396D00D74B1C /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4AB92661396D00D74B1C /* Temperature.swift */; };
+		655A4ABD266232F700D74B1C /* CityViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4ABC266232F700D74B1C /* CityViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		655A4AB52661394500D74B1C /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		655A4AB72661395400D74B1C /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
 		655A4AB92661396D00D74B1C /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		655A4ABC266232F700D74B1C /* CityViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		655A4A902660DE2500D74B1C /* Weather_App */ = {
 			isa = PBXGroup;
 			children = (
+				655A4ABB266232E000D74B1C /* ViewModels */,
 				655A4AA92660EAB000D74B1C /* Networking */,
 				655A4AA82660E97800D74B1C /* LottieAnimations */,
 				655A4AA72660E97000D74B1C /* Controllers */,
@@ -137,6 +140,14 @@
 				655A4AAF2660EBED00D74B1C /* NetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		655A4ABB266232E000D74B1C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				655A4ABC266232F700D74B1C /* CityViewViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				655A4A942660DE2500D74B1C /* SceneDelegate.swift in Sources */,
 				655A4AB62661394500D74B1C /* WeatherDetail.swift in Sources */,
 				655A4AAB2660EAC000D74B1C /* API.swift in Sources */,
+				655A4ABD266232F700D74B1C /* CityViewViewModel.swift in Sources */,
 				655A4A962660DE2500D74B1C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
