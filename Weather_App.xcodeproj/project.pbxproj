@@ -27,6 +27,7 @@
 		651768BC2663531800CB5912 /* dayThunderstorm.json in Resources */ = {isa = PBXBuildFile; fileRef = 651768AA2663531800CB5912 /* dayThunderstorm.json */; };
 		651768BD2663531800CB5912 /* dayFewClouds.json in Resources */ = {isa = PBXBuildFile; fileRef = 651768AB2663531800CB5912 /* dayFewClouds.json */; };
 		651768BE2663531800CB5912 /* nightMist.json in Resources */ = {isa = PBXBuildFile; fileRef = 651768AC2663531800CB5912 /* nightMist.json */; };
+		651768C0266359A700CB5912 /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651768BF266359A700CB5912 /* MenuHeader.swift */; };
 		655A4A922660DE2500D74B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4A912660DE2500D74B1C /* AppDelegate.swift */; };
 		655A4A942660DE2500D74B1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4A932660DE2500D74B1C /* SceneDelegate.swift */; };
 		655A4A962660DE2500D74B1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A4A952660DE2500D74B1C /* ContentView.swift */; };
@@ -64,6 +65,7 @@
 		651768AA2663531800CB5912 /* dayThunderstorm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = dayThunderstorm.json; path = ../../../../Downloads/WeatherApp/LottieAnimations/dayThunderstorm.json; sourceTree = "<group>"; };
 		651768AB2663531800CB5912 /* dayFewClouds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = dayFewClouds.json; path = ../../../../Downloads/WeatherApp/LottieAnimations/dayFewClouds.json; sourceTree = "<group>"; };
 		651768AC2663531800CB5912 /* nightMist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nightMist.json; path = ../../../../Downloads/WeatherApp/LottieAnimations/nightMist.json; sourceTree = "<group>"; };
+		651768BF266359A700CB5912 /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 		655A4A8E2660DE2500D74B1C /* Weather_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		655A4A912660DE2500D74B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		655A4A932660DE2500D74B1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				65176899266344B500CB5912 /* LottieView.swift */,
+				651768BF266359A700CB5912 /* MenuHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				655A4AB82661395400D74B1C /* DailyWeather.swift in Sources */,
 				655A4AB42661393700D74B1C /* Weather.swift in Sources */,
 				655A4AB02660EBED00D74B1C /* NetworkManager.swift in Sources */,
+				651768C0266359A700CB5912 /* MenuHeader.swift in Sources */,
 				655A4AAD2660EAE700D74B1C /* Extensions.swift in Sources */,
 				655A4A922660DE2500D74B1C /* AppDelegate.swift in Sources */,
 				655A4AB22661390500D74B1C /* WeatherResponse.swift in Sources */,
