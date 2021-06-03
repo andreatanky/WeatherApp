@@ -12,28 +12,43 @@ struct DailyWeatherView: View {
     @ObservedObject var cityVM: CityViewViewModel
     
     var body: some View {
-        ForEach(cityVM.weather.daily) { weather in
-            LazyVStack {
-                dailyCell(weather: weather)
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 15) {
+                ForEach(cityVM.weather.daily) { weather in
+                    LazyVStack {
+                        dailyView(weather: weather)
+                    }
+                }
             }
         }
     }
     
-    private func dailyCell(weather: DailyWeather) -> some View {
-        HStack {
-            Text(cityVM.getDayFor(timestamp: weather.dt).uppercased()).frame(width: 50)
+    private func dailyView(weather: DailyWeather) -> some View {
+        
+        VStack {
+            Text(cityVM.getDayFor(timestamp: weather.dt)).frame(width: 50)
             
             Spacer()
             
-            Text("\(cityVM.getTempFor(temp: weather.temp.max)) | \(cityVM.getTempFor(temp: weather.temp.min)) ℃")
+            LottieView(name: cityVM.getLottieAnimationFor(icon: cityVM.getLottieAnimationFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "dayClearSky")))
+                .frame(width: 60, height: 60)
+            
+//            cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
+            
+            Spacer()
+            
+            Text(String(format: "%.1f%℃", (weather.temp.min + weather.temp.max)/2))
+                .font(.system(size: 20))
+            
+            Spacer()
+            
+            Text("\(cityVM.getTempFor(temp: weather.temp.min)) - \(cityVM.getTempFor(temp: weather.temp.max)) ℃")
                 .frame(width: 150)
-            
-            Spacer()
-            cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
+                .padding()
         }
         .foregroundColor(.white)
-        .padding(.horizontal, 40)
-        .padding(.vertical, 15)
+    .padding(.horizontal, 17)
+     .padding(.vertical, 15)
         .background(RoundedRectangle(cornerRadius: 15).fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))]), startPoint: .top, endPoint: .bottom)))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 2, y: 2)
