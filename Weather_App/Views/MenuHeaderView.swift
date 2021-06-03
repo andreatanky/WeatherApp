@@ -19,25 +19,28 @@ struct MenuHeaderView: View {
                 .padding(.leading, 20)
                 .foregroundColor(.black)
             
+            
             Button {
                 cityVM.city = searchTerm
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color(#colorLiteral(red: 0.9196747541, green: 0.2115088999, blue: 0.04895227402, alpha: 1)))
+                        .fill(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
                         .frame(width: 40, height: 40)
                     
                     Image(systemName: "magnifyingglass")
                 }
+                .padding(.trailing, 10)
             }
             .frame(width: 40, height: 30)
         }
         .foregroundColor(.white)
         .padding()
         .background(ZStack (alignment: .leading) {
-            
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.white.opacity(0.3))
+                .fill(Color.pink.opacity(0.3))
+                .padding(.leading, 10)
+                .padding(.trailing, 10)
         })
     }
 }

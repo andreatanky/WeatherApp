@@ -34,7 +34,7 @@ struct DailyWeatherView: View {
         .foregroundColor(.white)
         .padding(.horizontal, 40)
         .padding(.vertical, 15)
-        .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color(#colorLiteral(red: 0.01022305992, green: 0.2672007084, blue: 0.2860581279, alpha: 1))]), startPoint: .top, endPoint: .bottom)))
+        .background(RoundedRectangle(cornerRadius: 15).fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))]), startPoint: .top, endPoint: .bottom)))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 2, y: 2)
     }

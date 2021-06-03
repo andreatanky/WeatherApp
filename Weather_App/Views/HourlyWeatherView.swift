@@ -13,7 +13,7 @@ struct HourlyWeatherView: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 20) {
+            HStack(spacing: 15) {
                 ForEach(cityVM.weather.hourly) { weather in
                     let icon = cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
                     let hour = cityVM.getTimeFor(timestamp: weather.dt)
@@ -28,12 +28,15 @@ struct HourlyWeatherView: View {
     private func getHourlyView(hour: String, image: Image, temp: String) -> some View {
         VStack(spacing: 20) {
             Text(hour)
-            image.foregroundColor(.yellow)
-            Text(temp)
+            image.foregroundColor(Color(#colorLiteral(red: 0.9882352941, green: 0.9176470588, blue: 0.8705882353, alpha: 1))).font(.system(size: 25))
+            HStack {
+                Text(temp)
+                Text("℃")
+            }
         }
         .foregroundColor(.white)
         .padding()
-        .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color(#colorLiteral(red: 0.01022305992, green: 0.2672007084, blue: 0.2860581279, alpha: 1))]), startPoint: .top, endPoint: .bottom)))
+        .background(RoundedRectangle(cornerRadius: 15).fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.9823332429, green: 0.5144231915, blue: 0.2341812551, alpha: 1)), Color(#colorLiteral(red: 0.9818031192, green: 0.5200657248, blue: 0.233071357, alpha: 1))]), startPoint: .top, endPoint: .bottom)))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 2, y: 2)
     }
