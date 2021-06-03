@@ -13,30 +13,43 @@ struct TodayWeatherView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Text("Today")
-                .font(.largeTitle)
-                .bold()
-            
             HStack(spacing: 20) {
-                LottieView(name: cityVM.getLottieAnimationFor(icon: cityVM.weatherIcon))
-                    .frame(width: 100, height: 100)
-                
-                VStack(alignment: .leading) {
+                VStack(alignment: .center) {
                     Text("\(cityVM.temperature)℃")
-                        .font(.system(size: 42))
+                        .font(.system(size: 56))
+                        .padding(.init(top: 20, leading: 10, bottom: 20, trailing: 10))
                     Text(cityVM.conditions)
+                        .padding(.bottom, 20)
+                        .font(.system(size: 24))
                 }
             }
-            
-            HStack {
-                Spacer()
-                widgetView(image: "wind", color: .green, title: "\(cityVM.windSpeed)mi/hr")
-                Spacer()
-                widgetView(image: "drop.fill", color: .green, title: "\(cityVM.humidity)")
-                Spacer()
-                widgetView(image: "umbrella.fill", color: .green, title: "\(cityVM.rainChances)")
-                Spacer()
+            HStack(spacing: 10) {
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        widgetView(image: "drop.fill", color: .white, title: "")
+                            .padding(.leading, 6)
+                        Text("  Humidity")
+                        Text(cityVM.humidity)
+                    }.padding(.bottom, 1)
+                    HStack {
+                        widgetView(image: "umbrella.fill", color: .white, title: "")
+                            .padding(.leading, 3)
+                        Text(" Rainfall")
+                        Text(cityVM.rainChances)
+                    }.padding(.bottom, 1)
+                    HStack {
+                        widgetView(image: "wind", color: .white, title: "\(cityVM.rainChances)")
+                            .padding(.leading, 4)
+                        Text("Wind")
+                        Text("\(cityVM.windSpeed) mi/h")
+                    }
+                }
+                LottieView(name: cityVM.getLottieAnimationFor(icon: cityVM.weatherIcon))
+                    .frame(width: 160, height: 160)
+                    .padding(.leading, 20)
             }
+            
         }
         .padding()
         .foregroundColor(Color(#colorLiteral(red: 0, green: 0.1683244407, blue: 0.1706311405, alpha: 1)))
@@ -48,12 +61,11 @@ struct TodayWeatherView: View {
     private func widgetView(image: String, color: Color, title: String) -> some View {
         VStack {
             Image(systemName: image)
-                .padding()
-                .font(.title)
+                .font(.system(size: 25))
                 .foregroundColor(color)
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
+//                .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
             
-            Text(title)
+            //Text(title)
         }
     }
 }

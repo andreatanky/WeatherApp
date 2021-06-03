@@ -13,10 +13,9 @@ struct CityNameView: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .center, spacing: 10) {
+            VStack(alignment: .center, spacing: 0) {
                 Text("Current")
-                    .font(.title)
-                //Text(dt)
+                    .font(.system(size: 20).bold())
             }.foregroundColor(Color(#colorLiteral(red: 0, green: 0.1683244407, blue: 0.1706311405, alpha: 1)))
         }
     }
