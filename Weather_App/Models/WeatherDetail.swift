@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+  Of Weather Array in API
+ */
 struct WeatherDetail: Codable {
     var main: String
     var description: String

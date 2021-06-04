@@ -16,7 +16,7 @@ struct HourlyWeatherView: View {
             HStack(spacing: 15) {
                 ForEach(cityVM.weather.hourly) { weather in
                     
-                    let icon = cityVM.getLottieAnimationFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "dayClearSky")
+                    let icon = weather.weather.count > 0 ? weather.weather[0].icon : "dayFewClouds"
 //                    let icon = cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
                     let hour = cityVM.getTimeFor(timestamp: weather.dt)
                     let temp = cityVM.getTempFor(temp: weather.temp)
@@ -28,15 +28,13 @@ struct HourlyWeatherView: View {
     }
     
     private func getHourlyView(hour: String, image: String, temp: String) -> some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
             Text(hour)
             LottieView(name: cityVM.getLottieAnimationFor(icon: image))
-                .frame(width: 70, height: 60)
+                .frame(width: 80, height: 80)
 //            image.foregroundColor(Color(#colorLiteral(red: 0.9882352941, green: 0.9176470588, blue: 0.8705882353, alpha: 1))).font(.system(size: 25))
-            HStack {
-                Text(temp)
-                Text("℃")
-            }
+       
+            Text(temp + "°")
         }
         .foregroundColor(.white)
         .padding()

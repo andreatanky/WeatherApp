@@ -27,7 +27,7 @@ struct CityView: View {
             }
             HourlyWeatherView(cityVM: cityVM)
             HStack {
-                Text("Forecast / Daily").bold()
+                Text("Forecast / Weekly").bold()
                     .padding(.leading, 20)
                     .font(.system(size: 20))
                     .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))

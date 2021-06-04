@@ -15,7 +15,7 @@ struct TodayWeatherView: View {
         VStack(spacing: 10) {
             HStack(spacing: 20) {
                 VStack(alignment: .center) {
-                    Text("\(cityVM.temperature)℃")
+                    Text("\(cityVM.temperature)°")
                         .bold()
                         .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                         .font(.system(size: 56))

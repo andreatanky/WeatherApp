@@ -25,7 +25,7 @@ final class CityViewViewModel: ObservableObject {
     
     private lazy var dayFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEE"
+        formatter.dateFormat = "EEEE"
         return formatter
     }()
     

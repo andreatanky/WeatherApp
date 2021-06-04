@@ -26,25 +26,43 @@ struct DailyWeatherView: View {
     private func dailyView(weather: DailyWeather) -> some View {
         
         VStack {
-            Text(cityVM.getDayFor(timestamp: weather.dt)).frame(width: 50)
+            Text(cityVM.getDayFor(timestamp: weather.dt)).frame(width: 90)
             
             Spacer()
             
-            LottieView(name: cityVM.getLottieAnimationFor(icon: cityVM.getLottieAnimationFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "dayClearSky")))
-                .frame(width: 60, height: 60)
+            LottieView(name: cityVM.getLottieAnimationFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "dayClearSky"))
+                .frame(width: 90, height: 90)
             
 //            cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
             
             Spacer()
             
-            Text(String(format: "%.1f%℃", (weather.temp.min + weather.temp.max)/2))
-                .font(.system(size: 20))
+            Text(String(format: "%.1f°", (weather.temp.min + weather.temp.max)/2))
+                .font(.system(size: 21))
             
             Spacer()
             
-            Text("\(cityVM.getTempFor(temp: weather.temp.min)) - \(cityVM.getTempFor(temp: weather.temp.max)) ℃")
-                .frame(width: 150)
-                .padding()
+            HStack (spacing: 10){
+                VStack {
+                    Text("\(cityVM.getTempFor(temp: weather.temp.min))°")
+                        .frame(width: 50)
+                        .padding(.bottom, 5)
+                        .padding(.top, 5)
+                    Text("🔽")
+                }
+                VStack {
+                    Text("\(cityVM.getTempFor(temp: weather.temp.max))°")
+                        .frame(width: 50)
+                        .padding(.bottom, 5)
+                        .padding(.top, 5)
+                    Text("🔼")
+                }
+//                Text("\(cityVM.getTempFor(temp: weather.temp.min)) - \(cityVM.getTempFor(temp: weather.temp.max))🔽 ℃")
+//                    .frame(width: 120)
+//                    .padding(.bottom, 5)
+//                    .padding(.top, 5)
+            }
+            
         }
         .foregroundColor(.white)
     .padding(.horizontal, 17)
